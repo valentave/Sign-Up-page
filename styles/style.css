@@ -1,0 +1,171 @@
+:root {
+    --color1: #7fadc5;
+    --color2: #6797bc;
+    --color3: #073c8c;
+}
+
+@font-face {
+    font-family: "FredokaCondensed";
+    src: url("../fonts/Fredoka_Condensed-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FredokaCondensedRegular";
+    src: url("../fonts/Fredoka_Condensed-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    font-family: "FredokaCondensedRegular";
+    color: #fff;
+}
+
+.picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    background-image: url("../images/nature.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.logo-container {
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(25, 25, 25, 0.55);
+}
+
+.logo-image {
+    height: 4.5em;
+}
+
+.logo-container > h1 {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    color: #fff;
+    font-family: "FredokaCondensed";
+}
+
+.signup-container {
+    background: var(--color2);
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.disclaimer > p {
+    margin: 30px auto;
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    width: 80%;
+}
+
+.inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    border: 3px solid var(--color1);
+    border-radius: 10px;
+}
+
+legend {
+    margin: auto;
+    font-size: clamp(1.25rem, 2.25vw, 2.5rem);
+    padding: 0 1rem;
+}
+
+.inputs > div {
+    flex-basis: 50%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: clamp(1rem, 1.75vw, 1.25rem);
+}
+
+input:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: var(--color3);
+  -webkit-box-shadow: 0 0 0px 1000px var(--color1) inset;
+  transition: background 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover {
+    border: none;
+    -webkit-text-fill-color: var(--color1);
+    -webkit-box-shadow: 0 0 0px 1000px var(--color2) inset;
+    transition: background 5000s ease-in-out 0s;
+}
+
+input {
+    min-width: 20ch;
+    width: clamp(20ch, 50%, 45ch);
+    background: var(--color2);
+    color: var(--color1);
+    border: none;
+    border-bottom: 2px solid var(--color1);
+    transition: background 0.2s;
+    text-align: center;
+    font-size: 1.12rem;
+}
+
+input:focus {
+    background: var(--color1);
+    outline: none;
+    color: var(--color3);
+}
+
+.complete > button {
+    font-size: clamp(1rem, 1.75vw, 1.25rem);
+    height: 2.5rem;
+    border-radius: 10px;
+    background: var(--color1);
+    border: none;
+    width: clamp(4rem, 10vw, 300px);
+}
+
+.complete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.complete > p {
+    font-size: 1.3rem;
+}
+
+.complete > p > a {
+    text-decoration: none;
+    font-family: "FredokaCondensed";
+    color: var(--color1);
+}
+
+.complete > p > a:visited {
+    color: var(--color1);
+}
